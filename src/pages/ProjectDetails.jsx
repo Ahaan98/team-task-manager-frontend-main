@@ -147,7 +147,7 @@ const ProjectDetails = () => {
     if (!taskDueDate) { showToast('Due date is required', 'error'); return; }
     try {
       setSubmittingTask(true);
-      const payload = { title: taskTitle, description: taskDescription, dueDate: taskDueDate, priority: taskPriority, projectId: parseInt(id), assignedToId: taskAssigneeId ? parseInt(taskAssigneeId) : null, status: taskStatus };
+      const payload = { title: taskTitle, description: taskDescription, dueDate: taskDueDate, priority: taskPriority, projectId: id, assignedToId: taskAssigneeId || null, status: taskStatus };
       const res = selectedTask
         ? await api.updateTask(selectedTask.id, isAdmin ? payload : { status: taskStatus })
         : await api.createTask(payload);

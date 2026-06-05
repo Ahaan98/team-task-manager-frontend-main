@@ -1,3 +1,7 @@
+# Team Task Manager
+
+🔗 **Live App:** [https://team-task-manager-frontend-main-production.up.railway.app/](https://team-task-manager-frontend-main-production.up.railway.app/)
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
